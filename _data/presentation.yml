@@ -1,0 +1,67 @@
+name: Djefferson william da silva
+currentPosition: Engenheiro de software sênior
+github: https://github.com/djeffersonx
+linkedin: https://www.linkedin.com/in/djeffersonx
+facebook: https://facebook.com/djeffersonx
+instagram: https://instagram.com/djeffersonx
+email: djeffersonx@gmail.com
+dateOfBirth: 1991-02-02
+presentation: Apresentação Aqui
+resume: Resumo aqui
+location: Florianópolis - SC
+
+employment:
+  - title: Dextra
+    positions: 
+      - "2020 até o momento: Engenheiro de Software Sênior"
+    description: 
+
+  - title: VH Soluções em software
+    positions: 
+      - "2018 - 2020: Programador Sênior"
+      - "2013 - 2014: Programor pleno"
+    description: 
+
+  - title: Virtuem
+    positions: 
+      - "2011 - 2013: Programador Júnior"
+      - "2011 - 2011: Estagiário de programação"
+    description: 
+
+skills:
+  - title: Padrões de projeto
+    percentage: 90
+  - title: Java
+    percentage: 100
+  - title: Arquitetura de software
+    percentage: 70
+  - title: Spring
+    percentage: 100
+  - title: JPA
+    percentage: 100
+  - title: Docker
+    percentage: 60
+  - title: Cloud / AWS / Google Cloud
+    percentage: 60
+  - title: SQL
+    percentage: 85
+  - title: Padrões de projeto
+    percentage: 90
+  - title: Linux
+    percentage: 80
+  - title: Scrum/XP
+    percentage: 70
+  - title: JSF
+    percentage: 100
+  - title: JavaScript
+    percentage: 60
+  - title: CSS
+    percentage: 60
+
+education:
+  - title: Universidade Estácio de Sá
+    period: 2012 - 2018
+    description: Bacharel em Sistemas da Informação
+  - title: Senai
+    period: 2009 - 2011
+    description: Análise e Desenvolvimento de Sistemas
