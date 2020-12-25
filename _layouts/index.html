@@ -20,13 +20,15 @@
   <meta name="author" content="{{name}}">
   <title>{{name}}</title>
   <link rel="stylesheet" href="./assets/css/color.css">
+  <link rel="stylesheet" href="./assets/css/accordion.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet">
   <link href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-<!--Main menu-->
+
+  <!--Main menu-->
   <div class="menu">
     <div class="container">
       <div class="row">
@@ -43,9 +45,9 @@
       </div>
     </div>
   </div>
-<!--Main menu-->
+  <!--Main menu-->
 
-<!-- Mobile menu -->
+  <!-- Mobile menu -->
   <div class="mobile-menu d-lg-none">
     <div class="container">
       <div class="mobile-menu__close">
@@ -56,9 +58,9 @@
       </nav>
     </div>
   </div>
-<!-- Mobile menu -->
+  <!-- Mobile menu -->
 
-<!--Header-->
+  <!--Header-->
   <header class="main-header" style="background-image: url(assets/img/img_bg_header.jpg)">
     <div class="container">
       <div class="row personal-profile">
@@ -88,9 +90,9 @@
       </div>
     </div>
   </header>
-<!--Header-->
+  <!--Header-->
 
-<!--Presentation-->
+  <!--Presentation-->
   <section id="presentation" class="container section">
     <div class="row">
       <div class="col-md-10">
@@ -102,11 +104,11 @@
       </div>
     </div>
   </section>
-<!--Presentation-->
+  <!--Presentation-->
 
   <hr>
 
-<!--Resume-->
+  <!--Resume-->
   <section id="resume" class="container section">
     <div class="row">
       <div class="col-md-10">
@@ -116,9 +118,9 @@
         </p>
       </div>
     </div>
-<!--Resume-->
+    <!--Resume-->
 
-<!--Education -->
+    <!--Education -->
     <div id="education" class="row">
       <div class="col-md-8 section__resume resume-list">
         <h3 class="resume-list_title">formação acadêmica</h3>
@@ -127,9 +129,9 @@
         {% endfor %}
       </div>
     </div>
-<!--Education -->
+    <!--Education -->
 
-<!-- Employment -->
+    <!-- Employment -->
     <div id="employment" class="row">
       <div class="col-md-8 section__resume resume-list">
         <h3 class="resume-list_title">Experiência profissional</h3>
@@ -139,46 +141,48 @@
         {% endfor %}
       </div>
     </div>
-<!-- Employment -->
+    <!-- Employment -->
 
-<!--Skills -->
+    <!--Skills -->
     <div id="skills" class="row section__resume progress-list js-progress-list">
 
       <div class="col-md-8 section__resume resume-list">
         <h3 class="resume-list_title">competências</h3>
       </div>
 
-      {% for skillGroup in site.data.presentation.skills %}
-      
-        <div class="col-md-12 mr-auto section__skill_group_title">
-          <h4>{{skillGroup.title}}</h4>
+      <div class="accordion-container col-md-12">
+
+        {% for skillGroup in site.data.presentation.skills %}
+
+        <div class="ac">
+          <h2 class="ac-header">
+            <button class="ac-trigger">{{skillGroup.title}}</button>
+          </h2>
+          <div class="ac-panel">
+
+              {% assign halfSkillsGroupSize = skillGroup.itens.size | divided_by: 2 %}
+
+            <div class="col-md-6">
+              {% for skill in skillGroup.itens | limit: halfSkillsGroupSize %}
+              {% include skill.html title=skill.title percentage=skill.percentage %}
+              {% endfor %}
+            </div>
+
+            <div class="col-md-6">
+              {% for skill in skillGroup.itens | offset: halfSkillsGroupSize %}
+              {% include skill.html title=skill.title percentage=skill.percentage %}
+              {% endfor %}
+            </div>
+          </div>
         </div>
 
-        {% assign halfSkillsGroupSize = skillGroup.itens.size | divided_by: 2 %}
-
-        <div class="col-md-5 mr-auto">
-          
-          {% for skill in skillGroup.itens | limit: halfSkillsGroupSize %}
-          {% include skill.html title=skill.title percentage=skill.percentage %}
-          {% endfor %}
-      
-        </div>
-      
-        <div id="col2" class="col-md-5 mr-auto">
-      
-          {% for skill in skillGroup.itens | offset: halfSkillsGroupSize %}
-          {% include skill.html title=skill.title percentage=skill.percentage %}
-          {% endfor %}
-      
-        </div>
-
-      {% endfor %}
-
+        {% endfor %}
+      </div>
     </div>
   </section>
-<!--Skills -->
+  <!--Skills -->
 
-<!--Portfolio-->
+  <!--Portfolio-->
   <section id="projects" class="container section">
     <div class="row">
       <div class="col-md-12">
@@ -189,19 +193,20 @@
       <div class="col-md-12">
         <nav>
           <ul>
-            <li><a href="" data-portfolio-target-tag="all">all</a></li>
+            <li><a href="" data-portfolio-target-tag="all">Todos</a></li>
             {% for projectGroup in site.data.presentation.projects %}
-              <li><a href="" data-portfolio-target-tag="{{projectGroup.key}}">{{projectGroup.title}}</a></li>        
+            <li><a href="" data-portfolio-target-tag="{{projectGroup.key}}">{{projectGroup.title}}</a></li>
             {% endfor %}
           </ul>
         </nav>
       </div>
     </div>
 
-    {% for projectGroup in site.data.presentation.projects %}
-    {% for project in projectGroup.projects %}
+    {% for projectGroup in site.data.presentation.projects %}{% for project in projectGroup.projects %}
+
     <div class="portfolio-cards">
-      <div class="row project-card" data-toggle="modal" data-target="#project-modal-{{pojectGroup.key}}-{{project.key}}" data-portfolio-tag="{{projectGroup.key}}">
+      <div class="row project-card" data-toggle="modal" data-target="#project-modal-{{pojectGroup.key}}-{{project.key}}"
+        data-portfolio-tag="{{projectGroup.key}}">
         <div class="col-md-6 col-lg-5 project-card__img">
           <img class="" src="assets/img/img_project_1_mono.png" alt="project-img">
         </div>
@@ -224,13 +229,14 @@
     {% endfor %}
     {% endfor %}
   </section>
-<!--Portfolio-->
+  <!--Portfolio-->
 
-<!-- Portfolio Modal -->
-{% for projectGroup in site.data.presentation.projects %}
-{% for project in projectGroup.projects %}
+  <!-- Portfolio Modal -->
+  {% for projectGroup in site.data.presentation.projects %}
+  {% for project in projectGroup.projects %}
 
- <div class="modal fade portfolio-modal" id="project-modal-{{pojectGroup.key}}-{{project.key}}" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal fade portfolio-modal" id="project-modal-{{pojectGroup.key}}-{{project.key}}" tabindex="-1"
+    role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -262,9 +268,9 @@
     </div>
   </div>
 
-{% endfor %}
-{% endfor %}
-<!-- Portfolio Modal -->
+  {% endfor %}
+  {% endfor %}
+  <!-- Portfolio Modal -->
 
   <!--Contact-->
   <div class="background" style="background-image: url(assets/img/img_bg_main.jpg)">
@@ -321,7 +327,7 @@
       </div>
     </div>
   </div>
-<!--Contact-->
+  <!--Contact-->
 
   <script type="text/javascript">
     const age = new Date().getFullYear() - new Date(Date.parse("{{dateOfBirth}}")).getFullYear()
@@ -340,6 +346,35 @@
   <script src="assets/js/mbclicker.min.js"></script>
   <script src="assets/js/site-btn.js"></script>
   <script src="assets/js/style-switcher.js"></script>
+  <script src="assets/js/accordion.js"></script>
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+
+  <script>
+    new Accordion('.accordion-container', {
+      duration: 200,
+      beforeOpen: function (el) {
+        $('.ac-panel', el).toggleClass("accordion-panel-margin");
+      },
+      beforeClose: function(el){
+        $('.ac-panel', el).toggleClass("accordion-panel-margin");
+      }
+    });
+  </script>
 
 </body>
 
