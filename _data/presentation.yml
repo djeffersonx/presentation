@@ -6,7 +6,8 @@ facebook: https://facebook.com/djeffersonx
 instagram: https://instagram.com/djeffersonx
 email: djeffersonx@gmail.com
 dateOfBirth: 1991-02-02
-presentation: Apresentação Aqui
+presentation: Sou programador a 10 anos, trabalhando principalmente com Java e atuei também com Go, Python, Javascript, C# e VBScript.
+
 resume: Resumo aqui
 location: Florianópolis - SC
 
@@ -29,26 +30,34 @@ employment:
     description: 
 
 skills:
-  - title: Padrões de projeto
-    percentage: 90
   - title: Java
     percentage: 100
   - title: Arquitetura de software
     percentage: 70
   - title: Spring
     percentage: 100
+  - title: Git
+    percentage: 80
   - title: JPA
     percentage: 100
+  - title: TDD
+    percentage: 40
   - title: Docker
     percentage: 60
+  - title: Go
+    percentage: 70
+  - title: Python
+    percentage: 60
+  - title: Padrões de projeto
+    percentage: 90
   - title: Cloud / AWS / Google Cloud
     percentage: 60
   - title: SQL
-    percentage: 85
+    percentage: 80
   - title: Padrões de projeto
     percentage: 90
   - title: Linux
-    percentage: 80
+    percentage: 70
   - title: Scrum/XP
     percentage: 70
   - title: JSF
