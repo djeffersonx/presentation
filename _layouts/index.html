@@ -142,44 +142,43 @@
 <!-- Employment -->
 
 <!--Skills -->
-<div id="skills" class="row section__resume progress-list js-progress-list">
+    <div id="skills" class="row section__resume progress-list js-progress-list">
 
-  <div class="col-md-8 section__resume resume-list">
-    <h3 class="resume-list_title">competências</h3>
-  </div>
+      <div class="col-md-8 section__resume resume-list">
+        <h3 class="resume-list_title">competências</h3>
+      </div>
 
-  {% for skillGroup in site.data.presentation.skills %}
-  
-    <div class="col-md-12 mr-auto section__skill_group_title">
-      <h4>{{skillGroup.title}}</h4>
-    </div>
-
-    {% assign halfSkillsGroupSize = skillGroup.itens.size | divided_by: 2 %}
-
-    <div class="col-md-5 mr-auto">
+      {% for skillGroup in site.data.presentation.skills %}
       
-      {% for skill in skillGroup.itens | limit: halfSkillsGroupSize %}
-      {% include skill.html title=skill.title percentage=skill.percentage %}
-      {% endfor %}
-  
-    </div>
-  
-    <div id="col2" class="col-md-5 mr-auto">
-  
-      {% for skill in skillGroup.itens | offset: halfSkillsGroupSize %}
-      {% include skill.html title=skill.title percentage=skill.percentage %}
-      {% endfor %}
-  
-    </div>
+        <div class="col-md-12 mr-auto section__skill_group_title">
+          <h4>{{skillGroup.title}}</h4>
+        </div>
 
-  {% endfor %}
+        {% assign halfSkillsGroupSize = skillGroup.itens.size | divided_by: 2 %}
 
-</div>
+        <div class="col-md-5 mr-auto">
+          
+          {% for skill in skillGroup.itens | limit: halfSkillsGroupSize %}
+          {% include skill.html title=skill.title percentage=skill.percentage %}
+          {% endfor %}
+      
+        </div>
+      
+        <div id="col2" class="col-md-5 mr-auto">
+      
+          {% for skill in skillGroup.itens | offset: halfSkillsGroupSize %}
+          {% include skill.html title=skill.title percentage=skill.percentage %}
+          {% endfor %}
+      
+        </div>
+
+      {% endfor %}
+
+    </div>
+  </section>
 <!--Skills -->
 
-  </section>
-
-  <!--Portfolio-->
+<!--Portfolio-->
   <section id="projects" class="container section">
     <div class="row">
       <div class="col-md-12">
@@ -191,83 +190,81 @@
         <nav>
           <ul>
             <li><a href="" data-portfolio-target-tag="all">all</a></li>
-            <li><a href="" data-portfolio-target-tag="mobile apps">mobile apps</a></li>
-            <li><a href="" data-portfolio-target-tag="web-sites">web-sites</a></li>
-            <li><a href="" data-portfolio-target-tag="landing-pages">landing pages</a></li>
+            {% for projectGroup in site.data.presentation.projects %}
+              <li><a href="" data-portfolio-target-tag="{{projectGroup.key}}">{{projectGroup.title}}</a></li>        
+            {% endfor %}
           </ul>
         </nav>
       </div>
     </div>
+
+    {% for projectGroup in site.data.presentation.projects %}
+    {% for project in projectGroup.projects %}
     <div class="portfolio-cards">
-      <div class="row project-card" data-toggle="modal" data-target="#portfolioModal" data-portfolio-tag="web-sites">
+      <div class="row project-card" data-toggle="modal" data-target="#project-modal-{{pojectGroup.key}}-{{project.key}}" data-portfolio-tag="{{projectGroup.key}}">
         <div class="col-md-6 col-lg-5 project-card__img">
           <img class="" src="assets/img/img_project_1_mono.png" alt="project-img">
         </div>
         <div class="col-md-6 col-lg-7 project-card__info">
-          <h3 class="project-card__title">Mobile and desktop app for London hostel store </h3>
+          <h3 class="project-card__title">{{project.title}}</h3>
           <p class="project-card__description">
-            Do answered bachelor occasion in of offended no concerns. Supply worthy warmth branch of no ye.
-            Voice tried known to as my to. Though wished merits or be. Alone visit use these smart rooms ham.
+            {{project.shortDescription}}
           </p>
-          <p class="project-card__stack">Used stack:</p>
+          <p class="project-card__stack">Tecnologias:</p>
           <ul class="tags">
-            <li>html5</li>
-            <li>css3</li>
-            <li>JavaScript</li>
-            <li>bower</li>
-            <li>grunt</li>
+            {% for tag in project.tags %}
+            <li>{{tag}}</li>
+            {% endfor %}
           </ul>
-          <a href="" class="project-card__link">www.superapp.com</a>
-        </div>
-      </div>
-      <div class="row project-card" data-toggle="modal" data-target="#portfolioModal" data-portfolio-tag="mobile apps">
-        <div class="col-md-6 col-lg-5 project-card__img">
-          <img class="" src="assets/img/img_project_2_mono.png" alt="project-img">
-        </div>
-        <div class="col-md-6 col-lg-7 project-card__info">
-          <h3 class="project-card__title">Web app page for trevel company</h3>
-          <p class="project-card__description">
-            Preference any astonished unreserved mrs. Prosperous understood middletons in conviction an
-            uncommonly do. Supposing so be resolving breakfast am or perfectly. Is drew am hill from mr.
-          </p>
-          <p class="project-card__stack">Used stack:</p>
-          <ul class="tags">
-            <li>html5</li>
-            <li>css3</li>
-            <li>JavaScript</li>
-            <li>BEM</li>
-            <li>bower</li>
-            <li>grunt</li>
-          </ul>
-          <a href="" class="project-card__link">www.travellend.com</a>
-        </div>
-      </div>
-      <div class="row project-card" data-toggle="modal" data-target="#portfolioModal"
-        data-portfolio-tag="landing-pages">
-        <div class="col-md-6 col-lg-5 project-card__img">
-          <img class="" src="assets/img/img_project_3_mono.png" alt="project-img">
-        </div>
-        <div class="col-md-6 col-lg-7 project-card__info">
-          <h3 class="project-card__title">Admin template for Photo Service</h3>
-          <p class="project-card__description">
-            Do answered bachelor occasion in of offended no concerns. Supply worthy warmth branch of no ye.
-            Voice tried known to as my to. Though wished merits or be. Alone visit use these smart rooms ham.
-          </p>
-          <p class="project-card__stack">Used stack:</p>
-          <ul class="tags">
-            <li>html5</li>
-            <li>css3</li>
-            <li>JavaScript</li>
-            <li>BEM</li>
-            <li>bower</li>
-            <li>grunt</li>
-          </ul>
-          <a href="" class="project-card__link">www.coolphoto.com</a>
+
         </div>
       </div>
     </div>
+
+    {% endfor %}
+    {% endfor %}
   </section>
-  <!--Portfolio-->
+<!--Portfolio-->
+
+<!-- Portfolio Modal -->
+{% for projectGroup in site.data.presentation.projects %}
+{% for project in projectGroup.projects %}
+
+ <div class="modal fade portfolio-modal" id="project-modal-{{pojectGroup.key}}-{{project.key}}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
+          <p class="portfolio-modal__title">{{project.title}}</p>
+          <img class="portfolio-modal__img" src="{{project.image}}" alt="modal_img">
+          <p class="portfolio-modal__description">
+            {{project.completeDescription}}
+          </p>
+          {% if project.link %}
+          <div class="portfolio-modal__link">
+            <a href="{{project.link}}" target="_blank" class="project-card__link">{{project.link}}</a>
+          </div>
+          {% endif %}
+          <div class="portfolio-modal__stack">
+            <p class="portfolio-modal__stack-title">Tecnologias:</p>
+            <ul class="tags">
+              {% for tag in project.tags %}
+              <li>{{tag}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endfor %}
+{% endfor %}
+<!-- Portfolio Modal -->
 
   <!--Contact-->
   <div class="background" style="background-image: url(assets/img/img_bg_main.jpg)">
@@ -324,48 +321,8 @@
       </div>
     </div>
   </div>
-  <!--Contact-->
+<!--Contact-->
 
-  <!-- Portfolio Modal -->
-  <div class="modal fade portfolio-modal" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
-          <p class="portfolio-modal__title">Mobile and desktop app for London hostel store</p>
-          <img class="portfolio-modal__img" src="assets/img/img_project_1_mono.png" alt="modal_img">
-          <p class="portfolio-modal__description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt utlabore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum. Sed ut perspiciatis undeomnis iste natus error sit voluptatem accusantium doloremque
-            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-            conse.
-          </p>
-          <div class="portfolio-modal__link">
-            <a href="">www.superapp.com</a>
-          </div>
-          <div class="portfolio-modal__stack">
-            <p class="portfolio-modal__stack-title">Using stack:</p>
-            <ul class="tags">
-              <li>html5</li>
-              <li>css3</li>
-              <li>JavaScript</li>
-              <li>bower</li>
-              <li>grunt</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Portfolio Modal -->
   <script type="text/javascript">
     const age = new Date().getFullYear() - new Date(Date.parse("{{dateOfBirth}}")).getFullYear()
     document.getElementById("age").innerHTML = age

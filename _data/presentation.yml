@@ -144,3 +144,211 @@ education:
     description: Análise e Desenvolvimento de Sistemas
   
 projects:
+  - title: Virtuem
+    key: virtuem
+    projects:
+      - title: Produto Projuris Enterprise
+        key: projurisEnterprise
+        image: assets/img/img_project_1_mono.png
+        tags:
+          - XML
+          - JavaScript
+          - SQL
+
+        shortDescription: Short description
+        completeDescription: Complete description
+
+      - title: Arquitetura Projuris Enterprise
+        key: projurisWeb
+        image: assets/img/img_project_1_mono.png
+        tags:
+          - Java
+          - Spring
+          - SqlServer
+          - Oracle
+          - Mysql
+          - HTML
+          - CSS
+          - ExtJS
+          - SQL
+        shortDescription: Short description
+        completeDescription: Complete description
+
+  - title: DuoTecnologia
+    key: DuoTecnologia
+    projects:
+      - title: Projuris Web
+        key: projurisWeb
+        image: assets/img/img_project_1_mono.png
+        tags:
+          - Spring
+          - Groovy
+          - Grails
+          - JBoss
+
+        shortDescription: Short description
+        completeDescription: Complete description
+
+  - title: VH Soluções
+    key: vhSolucoes
+    projects:
+      - title: Sistema escola legislativo
+        key: sistemaEscolaLegislativo
+        image: assets/img/img_project_1_mono.png
+        tags:
+          - Java
+          - Spring Framework
+          - Spring Security
+          - MySql
+          - Hibernate
+          - JSF/Primefaces
+          - CSS
+          - Tomcat
+
+        shortDescription: Short description
+        completeDescription: Complete description
+      - title: Participa+
+        key: participaMais
+        image: assets/img/img_project_1_mono.png
+        tags:
+          - Java
+          - Spring Boot
+          - Spring Security
+          - Spring Data
+          - QueryDSL
+          - ActiveMQ
+          - MySql
+          - Hibernate
+          - JSF/Primefaces
+          - CSS
+          - Tomcat
+        shortDescription: Short description
+        completeDescription: Complete description
+
+      - title: Spalm
+        key: Spalm
+        image: assets/img/img_project_1_mono.png
+        tags:
+          - Java
+          - Spring Framework
+          - Oracle
+          - SqlServer
+          - PostgreSql
+          - Flex
+          - Hibernate
+          - Tomcat
+        shortDescription: Short description
+        completeDescription: Complete description
+
+      - title: Sigor
+        key: Sigor
+        image: assets/img/img_project_1_mono.png
+        tags:
+          - Java
+          - Hibernate
+          - Spring Boot
+          - Spring Security
+          - Spring Data
+          - QueryDSL
+          - Oracle
+          - SqlServer
+          - PostgreSql
+          - JSF/Primefaces
+          - CSS
+          - Tomcat
+        shortDescription: Short description
+        completeDescription: Complete description
+
+  - title: Dextra
+    key: dextra
+    projects:
+      - title: McDonad's - RPA
+        key: rpaMcDonalds
+        image: assets/img/img_project_1_mono.png
+        tags:
+          - Java
+          - Spring Boot
+          - Spring Data
+          - MongoDB
+          - Go
+          - Python
+          - RabbitMQ
+          - SQS
+          - C#
+          - VBScript
+          - AWS
+          - Serverless
+
+        shortDescription: Short description
+        completeDescription: Complete description
+
+  - title: Github
+    key: github
+    projects:
+      - title: candle-forecast
+        key: candleForecast
+        image: assets/img/img_project_1_mono.png
+        tags:
+          - Data Science
+          - Python
+          - Pandas
+
+        shortDescription: Short description
+        completeDescription: Complete description
+        link: https://github.com/djeffersonx/python-candle-forecast
+
+      - title: spring-data-querydsl-batch-iterator
+        key: springDataQuerydslBatchIterator
+        image: assets/img/img_project_1_mono.png
+        tags:
+          - Java
+          - Spring Data
+          - QueryDSL
+
+        shortDescription: Short description
+        completeDescription: Complete description
+        link: https://github.com/djeffersonx/spring-data-querydsl-batch-iterator
+
+      - title: mql5-candle-classifier
+        key: mql5CandleClassifier
+        image: assets/img/img_project_1_mono.png
+        tags:
+          - MetaQuotes
+          - C++
+
+        shortDescription: Short description
+        completeDescription: Complete description
+        link: https://github.com/djeffersonx/mql5-candle-classifier
+
+      - title: mql4-flow-indicator
+        key: mql4FlowIndicator
+        image: assets/img/img_project_1_mono.png
+        tags:
+          - C++
+
+        shortDescription: Short description
+        completeDescription: Complete description
+        link: https://github.com/djeffersonx/mql4-flow-indicator
+
+      - title: mql5-ea-candle-knight
+        key: mql5EaCandleKnight
+        image: assets/img/img_project_1_mono.png
+        tags:
+          - MetaQuotes
+          - C++
+        shortDescription: Short description
+        completeDescription: Complete description
+        link: https://github.com/djeffersonx/mql5-ea-candle-knight
+
+      - title: kotlin-curriculum-rest
+        key: kotlinCurriculumRest
+        image: assets/img/img_project_1_mono.png
+        tags:
+          - Kotlin
+          - Spring Boot
+          - Spring MVC
+          - JPA/Hibernate
+
+        shortDescription: Short description
+        completeDescription: Complete description
+        link: https://github.com/djeffersonx/kotlin-curriculum-rest
