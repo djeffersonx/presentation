@@ -15,58 +15,126 @@ employment:
   - title: Dextra
     positions: 
       - "2020 até o momento: Engenheiro de Software Sênior"
-    description: 
+    description: Descrição aqui
 
   - title: VH Soluções em software
     positions: 
       - "2018 - 2020: Programador Sênior"
       - "2013 - 2014: Programor pleno"
-    description: 
+    description: Descrição aqui
 
   - title: Virtuem
     positions: 
       - "2011 - 2013: Programador Júnior"
       - "2011 - 2011: Estagiário de programação"
-    description: 
+    description: Descrição aqui
 
 skills:
-  - title: Java
-    percentage: 100
-  - title: Arquitetura de software
-    percentage: 70
-  - title: Spring
-    percentage: 100
-  - title: Git
-    percentage: 80
-  - title: JPA
-    percentage: 100
-  - title: TDD
-    percentage: 40
-  - title: Docker
-    percentage: 60
-  - title: Go
-    percentage: 70
-  - title: Python
-    percentage: 60
-  - title: Padrões de projeto
-    percentage: 90
-  - title: Cloud / AWS / Google Cloud
-    percentage: 60
-  - title: SQL
-    percentage: 80
-  - title: Padrões de projeto
-    percentage: 90
-  - title: Linux
-    percentage: 70
-  - title: Scrum/XP
-    percentage: 70
-  - title: JSF
-    percentage: 100
-  - title: JavaScript
-    percentage: 60
-  - title: CSS
-    percentage: 60
 
+  - programmingLanguages:
+    title: Linguagens
+    itens:
+      - title: Java
+        percentage: 100
+      - title: Go
+        percentage: 70
+      - title: Python
+        percentage: 60
+      - title: JavaScript
+        percentage: 60
+
+  - paradigmas:
+    title: Paradigmas
+    itens:
+      - title: Orientato a objetos
+        percentage: 100
+      - title: Funcional
+        percentage: 70
+      - title: Reativo
+        percentage: 30
+
+  - java:
+    title: Java
+    itens:
+    - title: JPA / Hibernate
+      percentage: 100
+    - title: JSF
+      percentage: 100
+
+  - spring:
+    title: Spring
+    itens:
+      - title: Spring Boot
+        percentage: 100
+      - title: Spring MVC
+        percentage: 100
+      - title: Spring Security
+        percentage: 90
+      - title: Spring Cloud
+        percentage: 40
+      - title: Spring Webflux
+        percentage: 30
+  
+  - technologies:
+    title: Tecnologias
+    itens:
+      - title: Git
+        percentage: 80
+      - title: Docker
+        percentage: 60
+
+  - frontend:
+    title: Frontend
+    itens:
+      - title: HTML
+        percentage: 100
+      - title: CSS
+        percentage: 60
+      - title: React
+        percentage: 30
+      - title: Vue
+        percentage: 30
+
+  - cloud:
+    title: Cloud
+    itens:
+      - title: AWS
+        percentage: 60
+      - title: Google Cloud
+        percentage: 50
+
+  - database:
+    title: Banco de dados
+    itens:
+      - title: SQL
+        percentage: 80
+      - title: Modelagem
+        percentage: 70
+      - title: Mysql
+        percentage: 80
+      - title: PostgreSQL
+        percentage: 80
+      - title: Oracle
+        percentage: 60
+      - title: SqlServer
+        percentage: 60
+      - title: MongoDB
+        percentage: 60
+
+  - others:
+    title: Outros
+    itens:
+      - title: Arquitetura de software
+        percentage: 70
+      - title: TDD
+        percentage: 60
+      - title: Padrões de projeto
+        percentage: 90
+      - title: Scrum/XP
+        percentage: 70
+      - title: Linux
+        percentage: 70
+  
 education:
   - title: Universidade Estácio de Sá
     period: 2012 - 2018
@@ -74,3 +142,5 @@ education:
   - title: Senai
     period: 2009 - 2011
     description: Análise e Desenvolvimento de Sistemas
+  
+projects:
