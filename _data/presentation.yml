@@ -175,7 +175,7 @@ projects:
         completeDescription: Complete description
 
       - title: Arquitetura Projuris Enterprise
-        key: projurisWeb
+        key: projurisEnterprise
         image: assets/img/img_projuris_enterprise.png
         tags:
           - Java

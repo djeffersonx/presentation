@@ -159,7 +159,7 @@
           </h2>
           <div class="ac-panel">
 
-              {% assign halfSkillsGroupSize = skillGroup.itens.size | divided_by: 2 %}
+            {% assign halfSkillsGroupSize = skillGroup.itens.size | divided_by: 2 %}
 
             <div class="col-md-6">
               {% for skill in skillGroup.itens | limit: halfSkillsGroupSize %}
@@ -246,7 +246,9 @@
         <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
           <p class="portfolio-modal__title">{{project.title}}</p>
 
-          <img class="portfolio-modal__img" src="{{project.image}}" alt="modal_img">
+          <div class="modal-project-card__img">
+            <img class="" src="{{project.image}}" alt="project-img">
+          </div>
 
           <p class="portfolio-modal__description">
             {{project.completeDescription}}
@@ -371,7 +373,7 @@
       beforeOpen: function (el) {
         $('.ac-panel', el).toggleClass("accordion-panel-margin");
       },
-      beforeClose: function(el){
+      beforeClose: function (el) {
         $('.ac-panel', el).toggleClass("accordion-panel-margin");
       }
     });

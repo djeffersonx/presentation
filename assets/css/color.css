@@ -12088,8 +12088,6 @@ input[type=number]::-webkit-outer-spin-button {
 	z-index: 0
 }
 
-
-
 @media screen and (max-width:990px) {
 	.main-header {
 		margin-bottom: 0
@@ -12304,6 +12302,23 @@ input[type=number]::-webkit-outer-spin-button {
 	margin-bottom: 40px;
 	transition: box-shadow .3s;
 	margin-right: 0
+}
+
+
+.modal-project-card__img{
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 25px;
+	display: flex;
+  	justify-content: center;
+}
+
+.modal-project-card__img img {
+	max-width: 250px;
+	max-height: 250px;
+	-o-object-fit: cover;
+	object-fit: cover;
+	margin: auto;
 }
 
 .project-card .project-card__img {
