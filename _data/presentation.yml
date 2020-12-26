@@ -13,32 +13,155 @@ location: Florianópolis - SC
 
 employment:
   - title: Dextra
+    key: dextra
     positions: 
       - "2020 até o momento: Engenheiro de Software Sênior"
     description: Descrição aqui
+    projects:
+      - title: McDonald's - RPA
+        key: rpaMcDonalds
+        image: assets/img/img_mcdonalds.png
+        tags:
+          - Java
+          - Spring Boot
+          - Spring Data
+          - MongoDB
+          - Go
+          - Python
+          - RabbitMQ
+          - SQS
+          - C#
+          - VBScript
+          - AWS
+          - Serverless
+
+        shortDescription: Short description
+        completeDescription: Complete description
 
   - title: VH Soluções em software
+    key: vhSolucoes
     positions: 
       - "2018 - 2020: Programador Sênior"
       - "2014 - 2018: Programador pleno"
-    description: "Desenvolvimento e manutenção nos softwares da empresa, operando em todas 
+    description: 'Desenvolvimento e manutenção nos softwares da empresa, operando em todas 
                   as camadas do sistema: Arquitetura, Infraestrutura, FrontEnd e Backend, utilizando
                   principalmente as tecnologias: Java, Javascript, JSF + Primefaces, Hibernate, MySql,
-                  PostgreSql, Spring Boot/Data/Security, Maven, QueryDSL, Tomcat, Docker, AWS."
+                  PostgreSql, Spring Boot/Data/Security, Maven, QueryDSL, Tomcat, Docker, AWS.'
+    projects:
+      - title: Sistema escola legislativo
+        key: sistemaEscolaLegislativo
+        image: assets/img/img_escola_legislativo.jpg
+        tags:
+          - Java
+          - Spring Framework
+          - Spring Security
+          - MySql
+          - Hibernate
+          - JSF/Primefaces
+          - CSS
+          - Tomcat
+        description: Complete description
+
+      - title: Participa+
+        key: participaMais
+        image: assets/img/img_participamais.png
+        tags:
+          - Java
+          - Spring Boot
+          - Spring Security
+          - Spring Data
+          - QueryDSL
+          - ActiveMQ
+          - MySql
+          - Hibernate
+          - JSF/Primefaces
+          - CSS
+          - Tomcat
+        description: Complete description
+
+      - title: Spalm
+        key: spalm
+        image: assets/img/img_code.png
+        tags:
+          - Java
+          - Spring Framework
+          - Oracle
+          - SqlServer
+          - PostgreSql
+          - Flex
+          - Hibernate
+          - Tomcat
+        description: Complete description
+
+      - title: Sigor
+        key: sigor
+        image: assets/img/img_sigorrfid.png
+        tags:
+          - Java
+          - Hibernate
+          - Spring Boot
+          - Spring Security
+          - Spring Data
+          - QueryDSL
+          - Oracle
+          - SqlServer
+          - PostgreSql
+          - JSF/Primefaces
+          - CSS
+          - Tomcat
+        description: Senado Federal, Assembleia Legislativa de Santa Catarina
 
   - title: Duo Tecnologia
+    key: duoTecnologia
     positions: 
       - "2013 - 2014: Programador pleno"
     description: Descrição aqui
+    projects:
+      - title: Projuris Web
+        key: projurisWeb
+        image: assets/img/img_projuris.png
+        tags:
+          - Spring
+          - Groovy
+          - Grails
+          - JBoss
+        description: Complete description
 
   - title: Virtuem
+    key: virtuem
     positions: 
       - "2011 - 2013: Programador Júnior"
       - "2011 - 2011: Estagiário de programação"
     description: "Desenvolvimentos e manutenções em um Framework utilizado internamente, e
                   implementações de regras de negócio em um produto da área jurídica, utilizando o
                   Framework."
+    projects:
+      - title: Produto Projuris Enterprise
+        key: prodProjurisEnterprise
+        image: assets/img/img_projuris_enterprise.png
+        tags:
+          - XML
+          - JavaScript
+          - SQL
+        description: Complete description
+
+      - title: Arquitetura Projuris Enterprise
+        key: arqProjurisEnterprise
+        image: assets/img/img_projuris_enterprise.png
+        tags:
+          - Java
+          - Spring
+          - SqlServer
+          - Oracle
+          - Mysql
+          - HTML
+          - CSS
+          - ExtJS
+          - SQL
+        description: Complete description
+
   - title: Brazilian international sistemas de segurança
+    key: biss
     positions: 
       - "2010 - 2011: Técnico em informática"
     description: "• Criação e manutenção da loja virtual da empresa, utilizando Magento. </br>
@@ -62,7 +185,7 @@ skills:
   - paradigmas:
     title: Paradigmas
     itens:
-      - title: Orientato a objetos
+      - title: Orientado a objetos
         percentage: 100
       - title: Funcional
         percentage: 70
@@ -160,147 +283,10 @@ education:
     description: Análise e Desenvolvimento de Sistemas
   
 projects:
-  - title: Virtuem
-    key: virtuem
-    projects:
-      - title: Produto Projuris Enterprise
-        key: projurisEnterprise
-        image: assets/img/img_projuris_enterprise.png
-        tags:
-          - XML
-          - JavaScript
-          - SQL
-
-        shortDescription: Short description
-        completeDescription: Complete description
-
-      - title: Arquitetura Projuris Enterprise
-        key: projurisEnterprise
-        image: assets/img/img_projuris_enterprise.png
-        tags:
-          - Java
-          - Spring
-          - SqlServer
-          - Oracle
-          - Mysql
-          - HTML
-          - CSS
-          - ExtJS
-          - SQL
-        shortDescription: Short description
-        completeDescription: Complete description
-
-  - title: DuoTecnologia
-    key: DuoTecnologia
-    projects:
-      - title: Projuris Web
-        key: projurisWeb
-        image: assets/img/img_projuris.png
-        tags:
-          - Spring
-          - Groovy
-          - Grails
-          - JBoss
-
-        shortDescription: Short description
-        completeDescription: Complete description
-
-  - title: VH Soluções
-    key: vhSolucoes
-    projects:
-      - title: Sistema escola legislativo
-        key: sistemaEscolaLegislativo
-        image: assets/img/img_escola_legislativo.jpg
-        tags:
-          - Java
-          - Spring Framework
-          - Spring Security
-          - MySql
-          - Hibernate
-          - JSF/Primefaces
-          - CSS
-          - Tomcat
-
-        shortDescription: Short description
-        completeDescription: Complete description
-      - title: Participa+
-        key: participaMais
-        image: assets/img/img_participamais.png
-        tags:
-          - Java
-          - Spring Boot
-          - Spring Security
-          - Spring Data
-          - QueryDSL
-          - ActiveMQ
-          - MySql
-          - Hibernate
-          - JSF/Primefaces
-          - CSS
-          - Tomcat
-        shortDescription: Short description
-        completeDescription: Complete description
-
-      - title: Spalm
-        key: Spalm
-        image: assets/img/img_code.png
-        tags:
-          - Java
-          - Spring Framework
-          - Oracle
-          - SqlServer
-          - PostgreSql
-          - Flex
-          - Hibernate
-          - Tomcat
-        shortDescription: Short description
-        completeDescription: Complete description
-
-      - title: Sigor
-        key: Sigor
-        image: assets/img/img_sigorrfid.png
-        tags:
-          - Java
-          - Hibernate
-          - Spring Boot
-          - Spring Security
-          - Spring Data
-          - QueryDSL
-          - Oracle
-          - SqlServer
-          - PostgreSql
-          - JSF/Primefaces
-          - CSS
-          - Tomcat
-        shortDescription: Short description
-        completeDescription: Senado Federal, Assembleia Legislativa de Santa Catarina
-
-  - title: Dextra
-    key: dextra
-    projects:
-      - title: McDonald's - RPA
-        key: rpaMcDonalds
-        image: assets/img/img_mcdonalds.png
-        tags:
-          - Java
-          - Spring Boot
-          - Spring Data
-          - MongoDB
-          - Go
-          - Python
-          - RabbitMQ
-          - SQS
-          - C#
-          - VBScript
-          - AWS
-          - Serverless
-
-        shortDescription: Short description
-        completeDescription: Complete description
 
   - title: Github
     key: github
-    projects:
+    itens:
       - title: candle-forecast
         key: candleForecast
         image: assets/img/img_mt4_logo.png

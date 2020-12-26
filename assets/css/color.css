@@ -173,7 +173,7 @@ a:hover {
 a:not([href]):not([tabindex]),
 a:not([href]):not([tabindex]):focus,
 a:not([href]):not([tabindex]):hover {
-	color: inherit;
+	/*color: inherit;*/
 	text-decoration: none
 }
 
@@ -4913,6 +4913,7 @@ button.close {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	padding: 30px;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
@@ -12124,8 +12125,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .section {
-	padding-top: 60px;
-	padding-bottom: 60px
+	padding-top: 30px;
+	padding-bottom: 20px
 }
 
 .section .section__title {
@@ -12381,13 +12382,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .resume-list {
-	margin-top: 20px;
 	margin-bottom: 10px
 }
 
 .resume-list .resume-list_title {
 	font-family: Roboto Mono, monospace;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 20px;
 	letter-spacing: 5px;
 	text-transform: uppercase;
@@ -12720,10 +12720,6 @@ input[type=number]::-webkit-outer-spin-button {
 	margin-bottom: 30px
 }
 
-.progress-list {
-	margin-top: 30px
-}
-
 .progress-list .progress-list__title {
 	font-family: Roboto Mono, monospace;
 	letter-spacing: 5px;
@@ -12765,7 +12761,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .portfolio-modal .modal-header {
 	border-bottom: 0;
-	height: 70px
+	height: 30px
 }
 
 @media screen and (max-width:990px) {
@@ -13244,4 +13240,13 @@ input[type=number]::-webkit-outer-spin-button {
 
 .job-description{
 	font-size: 14px;
+}
+
+.education-description {
+	font-size: 14px;	
+}
+
+.employment-projects {
+	font-size: 14px;
+	margin-top: 20px !important;
 }

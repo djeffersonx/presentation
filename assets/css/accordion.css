@@ -21,7 +21,7 @@
 
 .ac .ac-trigger {
   font: bold 16px 'Arial', sans-serif;
-  color: #111;
+  color: #6d56c1;
   text-align: left;
   width: 100%;
   padding: 10px 30px 10px 10px;
@@ -48,7 +48,7 @@
 }
 
 .ac .ac-trigger:focus {
-  color: #8a8a8a;
+  color: #8372c1;
 }
 
 .ac .ac-panel {

@@ -120,7 +120,7 @@
     <!--Resume-->
 
     <!--Education -->
-    <div id="education" class="row">
+    <div id="education" class="row section">
       <div class="col-md-8 section__resume resume-list">
         <h3 class="resume-list_title">formação acadêmica</h3>
         {% for education in site.data.presentation.education %}
@@ -131,19 +131,18 @@
     <!--Education -->
 
     <!-- Employment -->
-    <div id="employment" class="row">
+    <div id="employment" class="row section">
       <div class="col-md-8 section__resume resume-list">
         <h3 class="resume-list_title">Experiência profissional</h3>
-        {% for job in site.data.presentation.employment %}
-        {% assign positions = job.positions | join: "</br>" %}
-        {% include job.html title=job.title subtitle=positions description=job.description %}
+        {% for employment in site.data.presentation.employment %}
+        {% include employment.html employment=employment %}
         {% endfor %}
       </div>
     </div>
     <!-- Employment -->
 
     <!--Skills -->
-    <div id="skills" class="row section__resume progress-list js-progress-list">
+    <div id="skills" class="row section__resume progress-list js-progress-list section">
 
       <div class="col-md-8 section__resume resume-list">
         <h3 class="resume-list_title">competências</h3>
@@ -157,21 +156,12 @@
           <h2 class="ac-header">
             <button class="ac-trigger">{{skillGroup.title}}</button>
           </h2>
-          <div class="ac-panel">
+          <div class="ac-panel row container">
 
-            {% assign halfSkillsGroupSize = skillGroup.itens.size | divided_by: 2 %}
+            {% for skill in skillGroup.itens %}
+            {% include skill.html title=skill.title percentage=skill.percentage %}
+            {% endfor %}
 
-            <div class="col-md-6">
-              {% for skill in skillGroup.itens | limit: halfSkillsGroupSize %}
-              {% include skill.html title=skill.title percentage=skill.percentage %}
-              {% endfor %}
-            </div>
-
-            <div class="col-md-6">
-              {% for skill in skillGroup.itens | offset: halfSkillsGroupSize %}
-              {% include skill.html title=skill.title percentage=skill.percentage %}
-              {% endfor %}
-            </div>
           </div>
         </div>
 
@@ -192,19 +182,23 @@
       <div class="col-md-12">
         <nav>
           <ul>
+            {% assign projectsSize = site.data.presentation.projects | size%}
+            {% if projectsSize > 1 %}
             <li><a href="" data-portfolio-target-tag="all">Todos</a></li>
             {% for projectGroup in site.data.presentation.projects %}
             <li><a href="" data-portfolio-target-tag="{{projectGroup.key}}">{{projectGroup.title}}</a></li>
             {% endfor %}
+            {% endif %}
           </ul>
         </nav>
       </div>
     </div>
 
-    {% for projectGroup in site.data.presentation.projects %}{% for project in projectGroup.projects %}
+    {% for projectGroup in site.data.presentation.projects %}
+    {% for project in projectGroup.itens %}
 
     <div class="portfolio-cards">
-      <div class="row project-card" data-toggle="modal" data-target="#project-modal-{{pojectGroup.key}}-{{project.key}}"
+      <div class="row project-card" data-toggle="modal" data-target="#modal-{{projectGroup.key}}-{{project.key}}"
         data-portfolio-tag="{{projectGroup.key}}">
         <div class="col-md-6 col-lg-5 project-card__img">
           <img class="" src="{{project.image}}" alt="project-img">
@@ -227,53 +221,30 @@
 
     {% endfor %}
     {% endfor %}
+
   </section>
   <!--Portfolio-->
 
   <!-- Portfolio Modal -->
   {% for projectGroup in site.data.presentation.projects %}
-  {% for project in projectGroup.projects %}
-
-  <div class="modal fade portfolio-modal" id="project-modal-{{pojectGroup.key}}-{{project.key}}" tabindex="-1"
-    role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
-          <p class="portfolio-modal__title">{{project.title}}</p>
-
-          <div class="modal-project-card__img">
-            <img class="" src="{{project.image}}" alt="project-img">
-          </div>
-
-          <p class="portfolio-modal__description">
-            {{project.completeDescription}}
-          </p>
-          {% if project.link %}
-          <div class="portfolio-modal__link">
-            <a href="{{project.link}}" target="_blank" class="project-card__link">{{project.link}}</a>
-          </div>
-          {% endif %}
-          <div class="portfolio-modal__stack">
-            <p class="portfolio-modal__stack-title">Tecnologias:</p>
-            <ul class="tags">
-              {% for tag in project.tags %}
-              <li>{{tag}}</li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  {% for project in projectGroup.itens %}
+  {% assign porfolioProjectModalKey = projectGroup.key | append: '-' | append: project.key %}
+  {% include projectModal.html key=porfolioProjectModalKey title=project.title image=project.image
+    description=project.description link=project.link tags=project.tags %}
   {% endfor %}
   {% endfor %}
   <!-- Portfolio Modal -->
+
+
+  <!-- Employment Projects Modal -->
+  {% for employment in site.data.presentation.employment %}
+  {% for employmentProject in employment.projects %}
+  {% assign employmentProjectModalKey = employment.key | append: '-' | append: employmentProject.key %}
+  {% include projectModal.html key=employmentProjectModalKey title=employmentProject.title image=employmentProject.image
+  description=employmentProject.completeDescription link=employmentProject.link tags=employmentProject.tags %}
+  {% endfor %}
+  {% endfor %}
+  <!-- Employment Projects Modal -->
 
   <!--Contact-->
   <div class="background" style="background-image: url(assets/img/img_bg_main.jpg)">

@@ -1,0 +1,8 @@
+<div class="resume-list__block">
+    <p class="resume-list__block-title">{{include.employment.title}}</p>
+    <p class="resume-list__block-date">{{include.employment.positions | join: "</br>"}}</p>
+    <p class="job-description">
+        {{include.employment.description}}
+        {% include employmentProjects.html employment=include.employment  %}
+    </p>
+</div>
