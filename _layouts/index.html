@@ -27,7 +27,6 @@
 
 <body>
 
-
   <!--Main menu-->
   <div class="menu">
     <div class="container">
@@ -208,7 +207,7 @@
       <div class="row project-card" data-toggle="modal" data-target="#project-modal-{{pojectGroup.key}}-{{project.key}}"
         data-portfolio-tag="{{projectGroup.key}}">
         <div class="col-md-6 col-lg-5 project-card__img">
-          <img class="" src="assets/img/img_project_1_mono.png" alt="project-img">
+          <img class="" src="{{project.image}}" alt="project-img">
         </div>
         <div class="col-md-6 col-lg-7 project-card__info">
           <h3 class="project-card__title">{{project.title}}</h3>
@@ -246,7 +245,9 @@
         </div>
         <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
           <p class="portfolio-modal__title">{{project.title}}</p>
+
           <img class="portfolio-modal__img" src="{{project.image}}" alt="modal_img">
+
           <p class="portfolio-modal__description">
             {{project.completeDescription}}
           </p>

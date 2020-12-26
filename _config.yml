@@ -3,6 +3,3 @@ email: djeffersonx@gmail.com
 description: >- 
   Página pessoal para portifólio e apresentação.
 github_username:  djeffersonx
-
-plugins:
-  - jekyll-feed
