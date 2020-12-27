@@ -283,81 +283,81 @@ education:
     description: Análise e Desenvolvimento de Sistemas
   
 projects:
+  label: Projetos no GitHub
+  itens:
+    - title: Github
+      key: github
+      itens:
+        - title: candle-forecast
+          key: candleForecast
+          image: assets/img/img_mt4_logo.png
+          tags:
+            - Data Science
+            - Python
+            - Pandas
 
-  - title: Github
-    key: github
-    itens:
-      - title: candle-forecast
-        key: candleForecast
-        image: assets/img/img_mt4_logo.png
-        tags:
-          - Data Science
-          - Python
-          - Pandas
+          shortDescription: Short description
+          completeDescription: Complete description
+          link: https://github.com/djeffersonx/python-candle-forecast
 
-        shortDescription: Short description
-        completeDescription: Complete description
-        link: https://github.com/djeffersonx/python-candle-forecast
+        - title: spring-data-querydsl-batch-iterator
+          key: springDataQuerydslBatchIterator
+          image: assets/img/img_spring_data.png
+          tags:
+            - Java
+            - Spring Data
+            - QueryDSL
 
-      - title: spring-data-querydsl-batch-iterator
-        key: springDataQuerydslBatchIterator
-        image: assets/img/img_spring_data.png
-        tags:
-          - Java
-          - Spring Data
-          - QueryDSL
+          shortDescription: Short description
+          completeDescription: Complete description
+          link: https://github.com/djeffersonx/spring-data-querydsl-batch-iterator
 
-        shortDescription: Short description
-        completeDescription: Complete description
-        link: https://github.com/djeffersonx/spring-data-querydsl-batch-iterator
+        - title: mql5-candle-classifier
+          key: mql5CandleClassifier
+          image: assets/img/img_mt5_logo.png
+          tags:
+            - MetaQuotes
+            - C++
 
-      - title: mql5-candle-classifier
-        key: mql5CandleClassifier
-        image: assets/img/img_mt5_logo.png
-        tags:
-          - MetaQuotes
-          - C++
+          shortDescription: Short description
+          completeDescription: Complete description
+          link: https://github.com/djeffersonx/mql5-candle-classifier
 
-        shortDescription: Short description
-        completeDescription: Complete description
-        link: https://github.com/djeffersonx/mql5-candle-classifier
+        - title: mql4-flow-indicator
+          key: mql4FlowIndicator
+          image: assets/img/img_mt4_logo.png
+          tags:
+            - C++
 
-      - title: mql4-flow-indicator
-        key: mql4FlowIndicator
-        image: assets/img/img_mt4_logo.png
-        tags:
-          - C++
+          shortDescription: Short description
+          completeDescription: Complete description
+          link: https://github.com/djeffersonx/mql4-flow-indicator
 
-        shortDescription: Short description
-        completeDescription: Complete description
-        link: https://github.com/djeffersonx/mql4-flow-indicator
+        - title: mql5-ea-candle-knight
+          key: mql5EaCandleKnight
+          image: assets/img/img_mt5_logo.png
+          tags:
+            - MetaQuotes
+            - C++
+          shortDescription: Implementação de um Robô para Metatrader5 que busca padrões no gráfico para fazer operações de compra ou de venda a favor da tendência.
+          completeDescription: A implementação deste robô foi construído baseado na leitura de tendência de um gráfico, 
+              onde ele tenta identificar um padrão de movimento de tendência para segui-la com as operações.
+              </br>
+              </br>
+              O robô tenta encontrar um padrão com 4 candles de força em uma direção, ao encontrar este padrão ele entra com uma operação 
+              de compra ou de venta, buscando um take profit do tamanho do último candle multiplicado por 4.
 
-      - title: mql5-ea-candle-knight
-        key: mql5EaCandleKnight
-        image: assets/img/img_mt5_logo.png
-        tags:
-          - MetaQuotes
-          - C++
-        shortDescription: Implementação de um Robô para Metatrader5 que busca padrões no gráfico para fazer operações de compra ou de venda a favor da tendência.
-        completeDescription: A implementação deste robô foi construído baseado na leitura de tendência de um gráfico, 
-            onde ele tenta identificar um padrão de movimento de tendência para segui-la com as operações.
-            </br>
-            </br>
-            O robô tenta encontrar um padrão com 4 candles de força em uma direção, ao encontrar este padrão ele entra com uma operação 
-            de compra ou de venta, buscando um take profit do tamanho do último candle multiplicado por 4.
+          link: https://github.com/djeffersonx/mql5-ea-candle-knight
 
+        - title: kotlin-curriculum-rest
+          key: kotlinCurriculumRest
+          image: assets/img/img_kotlin.png
+          tags:
+            - Kotlin
+            - Spring Boot
+            - Spring MVC
+            - JPA/Hibernate
 
-        link: https://github.com/djeffersonx/mql5-ea-candle-knight
-
-      - title: kotlin-curriculum-rest
-        key: kotlinCurriculumRest
-        image: assets/img/img_kotlin.png
-        tags:
-          - Kotlin
-          - Spring Boot
-          - Spring MVC
-          - JPA/Hibernate
-
-        shortDescription: Short description
-        completeDescription: Complete description
-        link: https://github.com/djeffersonx/kotlin-curriculum-rest
+          shortDescription: Short description
+          completeDescription: Complete description
+          link: https://github.com/djeffersonx/kotlin-curriculum-rest

@@ -2,6 +2,7 @@
 {% assign instagram = site.data.presentation.instagram %}
 {% assign linkedin = site.data.presentation.linkedin %}
 {% assign github = site.data.presentation.github %}
+{% assign facebook = site.data.presentation.facebook %}
 {% assign email = site.data.presentation.email %}
 {% assign dateOfBirth = site.data.presentation.dateOfBirth %}
 {% assign presentation = site.data.presentation.presentation %}
@@ -80,10 +81,10 @@
             </dl>
           </div>
           <p class="personal-profile__social">
-            <a href="https://github.com/djeffersonx" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/djeffersonx/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-            <a href="https://facebook.com/djeffersonx" target="_blank"><i class="fa fa-facebook-square"></i></a>
-            <a href="https://instagram.com/djeffersonx" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="{{github}}" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="{{linkedin}}" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            <a href="{{facebook}}" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            <a href="{{instagram}}" target="_blank"><i class="fa fa-instagram"></i></a>
           </p>
         </div>
       </div>
@@ -175,17 +176,17 @@
   <section id="projects" class="container section">
     <div class="row">
       <div class="col-md-12">
-        <h2 id="portfolio_header" class="section__title">Projetos_</h2>
+        <h2 id="portfolio_header" class="section__title">{{site.data.presentation.projects.label}}_</h2>
       </div>
     </div>
     <div class="row portfolio-menu">
       <div class="col-md-12">
         <nav>
           <ul>
-            {% assign projectsSize = site.data.presentation.projects | size%}
+            {% assign projectsSize = site.data.presentation.projects.itens | size %}
             {% if projectsSize > 1 %}
             <li><a href="" data-portfolio-target-tag="all">Todos</a></li>
-            {% for projectGroup in site.data.presentation.projects %}
+            {% for projectGroup in site.data.presentation.projects.itens %}
             <li><a href="" data-portfolio-target-tag="{{projectGroup.key}}">{{projectGroup.title}}</a></li>
             {% endfor %}
             {% endif %}
@@ -194,9 +195,8 @@
       </div>
     </div>
 
-    {% for projectGroup in site.data.presentation.projects %}
+    {% for projectGroup in site.data.presentation.projects.itens %}
     {% for project in projectGroup.itens %}
-
     <div class="portfolio-cards">
       <div class="row project-card" data-toggle="modal" data-target="#modal-{{projectGroup.key}}-{{project.key}}"
         data-portfolio-tag="{{projectGroup.key}}">
@@ -226,7 +226,7 @@
   <!--Portfolio-->
 
   <!-- Portfolio Modal -->
-  {% for projectGroup in site.data.presentation.projects %}
+  {% for projectGroup in site.data.presentation.projects.itens %}
   {% for project in projectGroup.itens %}
   {% assign porfolioProjectModalKey = projectGroup.key | append: '-' | append: project.key %}
   {% include projectModal.html key=porfolioProjectModalKey title=project.title image=project.image
@@ -264,10 +264,10 @@
           </div>
           <div class="contacts__social">
             <ul>
-              <li><a href="https://www.linkedin.com/in/djeffersonx">Linkedin</a></li>
-              <li><a href="https://github.com/djeffersonx">GitHub</a></li>
-              <li><a href="https://facebook.com/djeffersonx">Facebook</a></li>
-              <li><a href="https://instagram.com/djeffersonx">Instagram</a></li>
+              <li><a target="_blank" href="{{linkedin}}">Linkedin</a></li>
+              <li><a target="_blank" href="{{github}}">GitHub</a></li>
+              <li><a target="_blank" href="{{facebook}}">Facebook</a></li>
+              <li><a target="_blank" href="{{instagram}}">Instagram</a></li>
             </ul>
           </div>
         </div>
