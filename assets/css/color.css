@@ -12124,10 +12124,6 @@ input[type=number]::-webkit-outer-spin-button {
 	opacity: .4
 }
 
-.section {
-	padding-top: 30px;
-	padding-bottom: 20px
-}
 
 .section .section__title {
 	margin-bottom: 40px;
@@ -12157,10 +12153,16 @@ input[type=number]::-webkit-outer-spin-button {
     display: table-cell;
 }
 
+.section {
+	padding-top: 30px;
+	padding-bottom: 20px
+}
+
+
 @media screen and (max-width:760px) {
 	.section {
-		padding-top: 50px;
-		padding-bottom: 50px
+		padding-top: 30px;
+		padding-bottom: 20px
 	}
 }
 
