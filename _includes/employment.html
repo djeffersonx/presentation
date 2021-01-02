@@ -3,6 +3,15 @@
     <p class="resume-list__block-date">{{include.employment.positions | join: "</br>"}}</p>
     <p class="job-description">
         {{include.employment.description}}
+        {% if (include.employment.assignments | size) > 0 %}
+        </br>
+        </br>
+        <b>Atribuições:</b>
+        {% for assignment in include.employment.assignments %}
+        </br>
+        • {{assignment}}
+        {% endfor %}
+        {% endif %}
         {% include employmentProjects.html employment=include.employment  %}
     </p>
 </div>

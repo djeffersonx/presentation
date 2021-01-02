@@ -1,8 +1,10 @@
+{% assign data = site.data.curriculum %}
+
 <ul>
-  <li><a href="#presentation">Apresentação</a></li>
-  <li><a href="#education">Formação acadêmica</a></li>
-  <li><a href="#employment">Experiência profissional</a></li>
-  <li><a href="#skills">Competências</a></li>
-  <li><a href="#projects">{{site.data.presentation.projects.label}}</a></li>
-  <li><a href="#contact">Contato</a></li>
+  <li><a href="#presentation">{{data.presentation.label | default: "Apresentação"}}</a></li>
+  <li><a href="#education">{{data.education.label | default: "Formação acadêmica"}}</a></li>
+  <li><a href="#employment">{{data.employments.label | default: "Experiência profissional"}}</a></li>
+  <li><a href="#skills">{{data.skills.label | default: "Competências"}}</a></li>
+  <li><a href="#projects">{{data.projects.label | default: "Projetos"}}</a></li>
+  <li><a href="#contact">{{data.contact.label | default: "Contato"}}</a></li>
 </ul>

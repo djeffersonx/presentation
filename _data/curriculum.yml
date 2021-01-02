@@ -1,22 +1,29 @@
 name: Djefferson william da silva
-currentPosition: Engenheiro de software sênior
-github: https://github.com/djeffersonx
-linkedin: https://www.linkedin.com/in/djeffersonx
-facebook: https://facebook.com/djeffersonx
-instagram: https://instagram.com/djeffersonx
-email: djeffersonx@gmail.com
 dateOfBirth: 1991-02-02
-presentation: Sou programador a 10 anos, trabalhando principalmente com Java e atuei também com Go, Python, Javascript, C# e VBScript.
-
-resume: Resumo aqui
+currentPosition: Engenheiro de software sênior
 location: Florianópolis - SC
 
-employment:
+contact:
+  github: https://github.com/djeffersonx
+  linkedin: https://www.linkedin.com/in/djeffersonx
+  facebook: https://facebook.com/djeffersonx
+  instagram: https://instagram.com/djeffersonx
+  email: djeffersonx@gmail.com
+
+presentation:
+    hello:  Olá aqui
+    resume: Resumo aqui
+
+employments:
   - title: Dextra
     key: dextra
     positions: 
       - "2020 até o momento: Engenheiro de Software Sênior"
-    description: Descrição aqui
+    description: "Entrei na empresa no final de 2020, buscando trabalhar em um empresa com vários grandes clientes visando encontrar um
+      ambiente de trabalho dinâmico e que possibilitasse eu trabalhar com diversas tecnologias no dia-a-dia."
+    assignments:
+      - Desenvolvimentos e manutenções em quase 20 projetos
+      - Levantamentos e validações junto ao cliente
     projects:
       - title: McDonald's - RPA
         key: rpaMcDonalds
@@ -29,24 +36,37 @@ employment:
           - Go
           - Python
           - RabbitMQ
+          - AWS
+          - Lambda
           - SQS
           - C#
           - VBScript
           - AWS
           - Serverless
 
-        shortDescription: Short description
-        completeDescription: Complete description
+        description: "O projeto do McDonald's com a Dextra envolve o desenvolvimento de RPA's (Robot Process Automation), 
+          e a extração de dados do sistema NP6 da Fujitsu e disponibilização através de API's que são consumidas por sistemas dos franqueados."
+        merits:
+          - Apredizado da linguagem GO para entregar 3 RPA's dois meses antes do prazo estabelecido.
+          - Unificação de uma infraestrutura para ETL que estava sendo repetida entre projetos.
+          - Desenvolvimentos rápidos (com qualidade) de customizações necessárias para o cliente no dia-a-dia.
+          - Criação de ferramentas para depuração de problemas no processo de ETL.
 
   - title: VH Soluções em software
     key: vhSolucoes
     positions: 
       - "2018 - 2020: Programador Sênior"
       - "2014 - 2018: Programador pleno"
-    description: 'Desenvolvimento e manutenção nos softwares da empresa, operando em todas 
-                  as camadas do sistema: Arquitetura, Infraestrutura, FrontEnd e Backend, utilizando
-                  principalmente as tecnologias: Java, Javascript, JSF + Primefaces, Hibernate, MySql,
-                  PostgreSql, Spring Boot/Data/Security, Maven, QueryDSL, Tomcat, Docker, AWS.'
+    description: 'Entrei na VH Soluções no começo de 2014 como programador pleno, 
+              para auxilar no desenvolvimento de sistemas utilizados por órgãos públicos como: Senado Federal, 
+              Assembléia legislativa de SC/BA, Câmara municipal de Florianópolis, etc.'
+    assignments:
+      - Desenvolvimento e manutenção
+      - Arquitetura de sistemas
+      - Manutenção de ambientes
+      - Analise e levantamento de requisitos
+      - Modelagem de banco de dados
+      
     projects:
       - title: Sistema escola legislativo
         key: sistemaEscolaLegislativo
@@ -116,6 +136,9 @@ employment:
     positions: 
       - "2013 - 2014: Programador pleno"
     description: Descrição aqui
+    assignments:
+      - Desenvolvimento e manutenção
+      - Arquitetura de sistema
     projects:
       - title: Projuris Web
         key: projurisWeb
@@ -127,6 +150,7 @@ employment:
           - JBoss
         description: Complete description
 
+
   - title: Virtuem
     key: virtuem
     positions: 
@@ -135,6 +159,9 @@ employment:
     description: "Desenvolvimentos e manutenções em um Framework utilizado internamente, e
                   implementações de regras de negócio em um produto da área jurídica, utilizando o
                   Framework."
+    assignments:
+      - Desenvolvimento e manutenção
+      - Arquitetura de sistema
     projects:
       - title: Produto Projuris Enterprise
         key: prodProjurisEnterprise
@@ -167,6 +194,11 @@ employment:
     description: "• Criação e manutenção da loja virtual da empresa, utilizando Magento. </br>
                   • Desenvolvimentos e manutenções do sistema interno de gestão de ordens de serviços e solicitações, utilizando Java + Swing + Postgresql. </br>
                   • Manutenção e instalação de computadores e equipamentos de segurança."
+    assignments:
+      - Manutenção de computadores
+      - Desenvolvimento de software
+      - Desenvolvimento de site/e-commerce
+      - Instalação e manutenção de equipamentos de segurança
 
 skills:
 

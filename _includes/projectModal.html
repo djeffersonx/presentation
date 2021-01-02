@@ -1,3 +1,5 @@
+{% assign project = include.project %}
+
 <div class="modal fade portfolio-modal" id="modal-{{include.key}}" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -6,24 +8,33 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <p class="portfolio-modal__title">{{include.title}}</p>
+      <p class="portfolio-modal__title">{{project.title}}</p>
 
       <div class="modal-project-card__img">
-        <img class="" src="{{include.image}}" alt="project-img">
+        <img class="" src="{{project.image}}" alt="project-img">
       </div>
 
       <p class="portfolio-modal__description">
-        {{include.description}}
+        {{project.description}}
+        {% if project.merits %}
+        </br>
+        </br>
+        <b>Méritos</b>
+        {% for merit in project.merits %}
+        </br>
+        • {{merit}}
+        {% endfor %}
+        {% endif %}
       </p>
       {% if project.link %}
       <div class="portfolio-modal__link">
-        <a href="{{include.link}}" target="_blank" class="project-card__link">{{include.link}}</a>
+        <a href="{{project.link}}" target="_blank" class="project-card__link">{{project.link}}</a>
       </div>
       {% endif %}
       <div class="portfolio-modal__stack">
         <p class="portfolio-modal__stack-title">Tecnologias:</p>
         <ul class="tags">
-          {% for tag in include.tags %}
+          {% for tag in project.tags %}
           <li>{{tag}}</li>
           {% endfor %}
         </ul>

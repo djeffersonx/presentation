@@ -12158,7 +12158,6 @@ input[type=number]::-webkit-outer-spin-button {
 	padding-bottom: 20px
 }
 
-
 @media screen and (max-width:760px) {
 	.section {
 		padding-top: 30px;
@@ -12717,7 +12716,7 @@ input[type=number]::-webkit-outer-spin-button {
 	opacity: .4;
 	width: 100%;
 	text-align: center;
-	top: 60px;
+	top: 40px;
 	position: relative;
 	margin-bottom: 30px
 }
