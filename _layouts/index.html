@@ -303,9 +303,19 @@
   <!--Contact-->
 
   <script type="text/javascript">
-    const age = new Date().getFullYear() - new Date(Date.parse("{{dateOfBirth}}")).getFullYear()
-    document.getElementById("age").innerHTML = age
+
+    function calcAge(strDateBirth) {
+      var dateBirth = new Date(Date.parse(strDateBirth));
+      var monthDiff = Date.now() - dateBirth.getTime();
+      var ageDate = new Date(monthDiff);
+      var year = ageDate.getUTCFullYear();
+      return Math.abs(year - 1970);
+    }
+
+    document.getElementById("age").innerHTML = calcAge("{{dateOfBirth}}")
+
   </script>
+
   <script src="assets/js/jquery-2.2.4.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
